@@ -11,3 +11,7 @@ let greet2 = function(name) {
 console.log(greet2('Vishu'))
 
 //Arrow Function: Callbacks
+{name}=> {
+    return `Hello,${name}`
+}
+console.log(greet3('Ashu'))

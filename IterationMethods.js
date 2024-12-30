@@ -1,3 +1,6 @@
+const { number } = require("zod");
+
+
 let arr1 = [10, 20, 30, 40, 50]
 for (var i = 0; i<= arr1.length; i++) {
   console.log('At index:', i, 'Element is:', arr1[i]);

@@ -1,0 +1,44 @@
+<script>
+    /*
+    1.WAP to display addition of numbers 
+    (numbers will be passed to a function as an argument at the time of calling of function.)
+    for eg. add(10, 20), add(50, 60, 70), add(), add(10)
+    
+    
+    2.WAP find sum of array elementsusing reduce(): and explan it.
+
+    3.Mention Function names for below operations:
+    a. Add ele at the end of an array: push()
+    b. Removes ele from the 0th index: shift()
+    c. Creating sub array without changing original array: slice()
+    d. Checking index of specific elements value: indexof()
+    e.Checking whether element is present in an array or not: include() 
+
+    4. Define lexical scope and explain it with the help of ex.
+    */
+
+    /////Answers:
+    var add = (...args)=> {
+        var res = args.reduce((acc, ele)=>acc+ele, 0);
+        console.log('Addition is : ', res)
+    }
+    add();
+
+    var add = (...args)=> {
+        if(args.length === 0) {
+            console.log('Invalid arguments')
+        } else {
+            var res = args.reduce((acc, ele)=> acc+ele, 0);
+            console.log('Addition is : ', res)
+        }
+    }
+    
+    add(10, 20, 50, 60, 70, 80, 9);
+
+    var arr = [10, 20, 30, 40, 50]
+    var sum = arr.reduce(function(acc, ele) {
+        acc = acc+ele;
+        return acc;
+    }, 0)
+    console.log('Sum is:', sum);
+</script>
